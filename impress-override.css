@@ -31,6 +31,10 @@ body {
   font-size: 18pt;
 }
 
+.left {
+  text-align: left;
+}
+
 code {
   font-family: 'Josefin Slab', monospace;
 }
