@@ -1,0 +1,12 @@
+#!/bin/sh
+
+sudo start libvirt-bin
+
+sudo virsh <<EOF
+start debian-i386-alice
+start debian-i386-bob
+start debian-i386-charlie
+start debian-i386-daisy
+start debian-i386-eric
+start debian-i386-frank
+EOF
