@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Hands On With Ceph</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Marcellus|Josefin+Slab:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" type="text/css" href="impress.css" />
+    <link rel="stylesheet" type="text/css" href="impress-override.css" />
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by
+      impress.js, so you are presented with a simplified version of
+      this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>,
+      <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+      <div class="step slide" data-x="0" data-y="0" data-scale="1">
+	<div style="text-align: right;">
+	  <h1>Hands-On With Ceph</h1>
+	  <h3>Object Storage, Block Storage, Filesystem & More</h3>
+	  <h5>LinuxCon Europe 2012</h5>
+	  <p>Barcelona, Catalunya, Espa&ntilde;a</p>
+	  <p>Nov 7, 2012</p>
+	</div>
+      </div>
+      <div class="step" data-x="0" data-y="20000" data-scale="10">
+	<img src="Ceph_Logo_Stacked.svg" height="100%"/>
+      </div>
+      <div class="step" data-x="0" data-y="20000" data-scale="40">
+      </div>
+      <div class="step" data-x="-10000" data-y="10000" data-scale="10">
+	<h3>Native Object Storage</h3>
+	<img src="ObjectStorage.svg" height="80%">
+      </div>
+      <div class="step" data-x="10000" data-y="10000" data-scale="10">
+	<h3>Block Storage</h3>
+	<img src="BlockStorage.svg"  height="80%">
+      </div>
+      <div class="step" data-x="10000" data-y="30000" data-scale="10">
+	<h3>ReSTful Object Storage</h3>
+	<img src="ReSTfulObjectStorage.svg" height="80%">
+      </div>
+      <div class="step center" data-x="-10000" data-y="30000" data-scale="10">
+	<h3>Distributed Filesystem</h3>
+	<img src="FileStorage.svg" height="80%">
+      </div>
+      <div class="step" data-x="0" data-y="20000" data-scale="40">
+      </div>
+      <div class="step" data-x="-10000" data-y="10000" data-scale="10">
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="-10000">
+	<p>Ceph is based on a <strong>distributed, autonomic, redundant</strong> native <strong>object store</strong> named <strong>RADOS.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="-8000">
+	<p><strong>R</strong>eliable<br/>
+	<strong>A</strong>utonomic<br/>
+	<strong>D</strong>istributed<br/>
+	<strong>O</strong>bject<br/>
+	<strong>S</strong>tore</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="-6000">
+	<p>RADOS is a <strong>flat namespace</strong> where each <strong>object</strong> has a <strong>name,</strong> any number of <strong>attributes,</strong> and a <strong>payload</strong> of (almost) arbitrary size.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="-4000">
+	<p>Objects are assigned to <strong>Placement Groups</strong> (PGs).</p>
+	<p>Each PG has an ordered list of <strong>Object Storage Devices</strong> (OSDs) where its contents are stored in a <strong>redundant</strong> fashion.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="-2000">
+	<p>Object placement is entirely <strong>algorithmic.</strong></p>
+	<p>There is no central lookup or distributed hashtable.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="0">
+	<p>All OSDs <strong>know about</strong> and can
+	<strong>propagate</strong> the current <strong>map</strong>
+	describing object placement.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="2000">
+	<p><strong>Monitor servers</strong> (MONs) arbitrate the cluster status and act as <strong>authorities</strong> for the placement map.</p>
+	<p>They use a <strong>distributed consensus</strong> protocol based on <strong>Paxos.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="4000">
+	<p>Both MONs and OSDs operate <strong>entirely in user space.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="6000">
+	<p>Enough talk.</p>
+	<p>Let's take a look.</p>
+      </div>
+      <div class="step" data-scale="1" data-x="-31000" data-y="8000">
+	<h3>daisy</h3>
+	<iframe src="https://localhost:4200/daisy" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-30000" data-y="8000">
+	<h3>eric</h3>
+	<iframe src="https://localhost:4200/eric" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-29000" data-y="8000">
+	<h3>frank</h3>
+	<iframe src="https://localhost:4200/frank" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="10000">
+	<p>Applications can <strong>interact</strong> with RADOS using <strong>a number of APIs.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="12000">
+	<p>There are also several high-level <strong>client layers</strong> that RADOS ships with.</p>
+      </div>
+      <div class="step" data-x="10000" data-y="10000" data-scale="10">
+      </div>
+    </div>
+
+<script src="impress.js"></script>
+<script>impress().init();</script>
+  </body>
+</html>
