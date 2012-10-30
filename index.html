@@ -15,7 +15,7 @@
       <b>Safari</b> or <b>Firefox</b> browser.</p>
     </div>
     <div id="impress">
-      <div class="step slide" data-x="0" data-y="0" data-scale="1">
+      <div class="step slide" data-x="0" data-y="-20000" data-scale="1">
 	<div style="text-align: right;">
 	  <h1>Hands-On With Ceph</h1>
 	  <h3>Object Storage, Block Storage, Filesystem & More</h3>
@@ -24,88 +24,237 @@
 	  <p>Nov 7, 2012</p>
 	</div>
       </div>
-      <div class="step" data-x="0" data-y="20000" data-scale="10">
+      <div class="step" data-x="0" data-y="0" data-scale="10">
 	<img src="Ceph_Logo_Stacked.svg" height="100%"/>
       </div>
-      <div class="step" data-x="0" data-y="20000" data-scale="40">
+      <div class="step" data-x="0" data-y="0" data-scale="40">
       </div>
-      <div class="step" data-x="-10000" data-y="10000" data-scale="10">
+      <div class="step" data-x="-10000" data-y="-10000" data-scale="10">
 	<h3>Native Object Storage</h3>
 	<img src="ObjectStorage.svg" height="80%">
       </div>
-      <div class="step" data-x="10000" data-y="10000" data-scale="10">
+      <div class="step" data-x="10000" data-y="-10000" data-scale="10">
 	<h3>Block Storage</h3>
 	<img src="BlockStorage.svg"  height="80%">
       </div>
-      <div class="step" data-x="10000" data-y="30000" data-scale="10">
+      <div class="step" data-x="10000" data-y="10000" data-scale="10">
 	<h3>ReSTful Object Storage</h3>
 	<img src="ReSTfulObjectStorage.svg" height="80%">
       </div>
-      <div class="step center" data-x="-10000" data-y="30000" data-scale="10">
+      <div class="step center" data-x="-10000" data-y="10000" data-scale="10">
 	<h3>Distributed Filesystem</h3>
 	<img src="FileStorage.svg" height="80%">
       </div>
-      <div class="step" data-x="0" data-y="20000" data-scale="40">
+      <div class="step" data-x="0" data-y="0" data-scale="40">
       </div>
-      <div class="step" data-x="-10000" data-y="10000" data-scale="10">
+      <div class="step" data-x="-10000" data-y="-10000" data-scale="10">
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="-10000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-30000">
 	<p>Ceph is based on a <strong>distributed, autonomic, redundant</strong> native <strong>object store</strong> named <strong>RADOS.</strong></p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="-8000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-28000">
 	<p><strong>R</strong>eliable<br/>
 	<strong>A</strong>utonomic<br/>
 	<strong>D</strong>istributed<br/>
 	<strong>O</strong>bject<br/>
 	<strong>S</strong>tore</p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="-6000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-26000">
 	<p>RADOS is a <strong>flat namespace</strong> where each <strong>object</strong> has a <strong>name,</strong> any number of <strong>attributes,</strong> and a <strong>payload</strong> of (almost) arbitrary size.</p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="-4000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-24000">
 	<p>Objects are assigned to <strong>Placement Groups</strong> (PGs).</p>
 	<p>Each PG has an ordered list of <strong>Object Storage Devices</strong> (OSDs) where its contents are stored in a <strong>redundant</strong> fashion.</p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="-2000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-22000">
 	<p>Object placement is entirely <strong>algorithmic.</strong></p>
 	<p>There is no central lookup or distributed hashtable.</p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="0">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-20000">
 	<p>All OSDs <strong>know about</strong> and can
 	<strong>propagate</strong> the current <strong>map</strong>
 	describing object placement.</p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="2000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-18000">
 	<p><strong>Monitor servers</strong> (MONs) arbitrate the cluster status and act as <strong>authorities</strong> for the placement map.</p>
 	<p>They use a <strong>distributed consensus</strong> protocol based on <strong>Paxos.</strong></p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="4000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-16000">
 	<p>Both MONs and OSDs operate <strong>entirely in user space.</strong></p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="6000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-14000">
 	<p>Enough talk.</p>
 	<p>Let's take a look.</p>
       </div>
-      <div class="step" data-scale="1" data-x="-31000" data-y="8000">
+      <div class="step" data-scale="1" data-x="-31000" data-y="-12000">
 	<h3>daisy</h3>
 	<iframe src="https://localhost:4200/daisy" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
       </div>
-      <div class="step" data-scale="1" data-x="-30000" data-y="8000">
+      <div class="step" data-scale="1" data-x="-30000" data-y="-12000">
 	<h3>eric</h3>
 	<iframe src="https://localhost:4200/eric" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
       </div>
-      <div class="step" data-scale="1" data-x="-29000" data-y="8000">
+      <div class="step" data-scale="1" data-x="-29000" data-y="-12000">
 	<h3>frank</h3>
 	<iframe src="https://localhost:4200/frank" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="10000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-10000">
 	<p>Applications can <strong>interact</strong> with RADOS using <strong>a number of APIs.</strong></p>
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="12000">
+      <div class="step" data-scale="2" data-x="-30000" data-y="-8000">
 	<p>There are also several high-level <strong>client layers</strong> that RADOS ships with.</p>
+      </div>
+      <div class="step" data-x="10000" data-y="-10000" data-scale="10">
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-26000">
+	<p>RADOS Block Device (RBD) is a
+	<strong>thin&#8209;provisioned</strong> block device interface that
+	<strong>stripes</strong> data across <strong>multiple RADOS
+	objects.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-24000">
+	<p>It supports <strong>cheap, read&#8209;only</strong> redirect&#8209;on&#8209;write <strong>snapshots.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-22000">
+	<p>RBD also supports supports efficient
+	<strong>cloning</strong>.</p>
+	<p>This makes it very well suited for maintaining
+	template-based <strong>virtual&nbsp;machines.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-20000">
+	<p>RBD comes in two <strong>flavors.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-18000">
+	<p><code>rbd</code> is a kernel-level <strong>block&nbsp;device&nbsp;driver</strong> merged upstream in <strong>Linux&nbsp;2.6.37.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-16000">
+	<p><code>qemu-rbd</code> is a userspace storage driver for <strong>Qemu</strong> and <strong>KVM.</strong></p>
+	<p>It is built on the <code>librados</code> C API.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="-14000">
+	<p>Again, let's take a peek.</p>
+      </div>
+      <div class="step" data-scale="1" data-x="29500" data-y="-12000">
+	<h3>alice</h3>
+	<iframe src="https://localhost:4200/alice" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="30500" data-y="-12000">
+	<h3>daisy</h3>
+	<iframe src="https://localhost:4200/daisy" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
       </div>
       <div class="step" data-x="10000" data-y="10000" data-scale="10">
       </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="12000">
+	<p>Ceph provides <strong>ReSTful HTTP(S)</strong> access to the object store.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="14000">
+	<p>It does so through a <code>FastCGI</code> application, <strong>radosgw.</strong></p>
+	<p>radosgw uses the <code>libradospp</code> C++ API.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="16000">
+	<p>radosgw runs in <strong>any web server</strong> that supports FastCGI.</p>
+	<p>The canonical deployment approach is with <strong>Apache</strong> and <strong>mod_fastcgi.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="18000">
+	<p>radosgw currently understands the <strong>Amazon S3</strong> and <strong>OpenStack Swift</strong> APIs.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="20000">
+	<p>radosgw supports <strong>native load balancing</strong> and <strong>scaleout.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="22000">
+	<p>Aaaaaaand... you know what's next.</p>
+      </div>
+      <div class="step" data-scale="1" data-x="29000" data-y="24000">
+	<h3>alice</h3>
+	<iframe src="https://localhost:4200/alice" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="30000" data-y="24000">
+	<h3>bob</h3>
+	<iframe src="https://localhost:4200/bob" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="31000" data-y="24000">
+	<h3>charlie</h3>
+	<iframe src="https://localhost:4200/charlie" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="2" data-x="30000" data-y="26000">
+	<p>And now.</p>
+	<p>Yeah, you've been waiting for this. <strong>I&nbsp;know.</strong></p>
+      </div>
+      <div class="step center" data-x="-10000" data-y="10000" data-scale="10">
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="12000">
+	<p><code>ceph</code> is a <strong>distributed filesystem</strong> built on top of RADOS.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="14000">
+	<p>It's been in the mainline kernel since <strong>2.6.32.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="16000">
+	<p>Its goal:</p>
+	<p>Think <strong>Lustre,</strong> done right.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="18000">
+	<p><code>ceph</code> layers <strong>POSIX semantics</strong> on top of RADOS.</p>
+	<p>It introduces <strong>directories, attributes,
+	permission&nbsp;bits</strong> and everything else that a POSIX
+	filesystem needs.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="20000">
+	<p>All <strong>filesystem metadata</strong> lives itself in
+	RADOS objects.</p>
+	<p>Ceph uses another type of daemon, a
+	<strong>metadata&nbsp;server</strong> (MDS), to manage this
+	metadata.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="22000">
+	<p>Just like all other Ceph daemons, the MDS runs
+	<strong>entirely in userspace.</strong></p>
+	<p>Only the <strong>filesystem client</strong> runs in the kernel.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="24000">
+	<p><code>ceph</code> mounts are <strong>writable</strong> from
+	any client and play nicely with
+	<code>flock()</code>&nbsp;and&nbsp;<code>fcntl()</code>&nbsp;<strong>locking.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="26000">
+	<p><code>ceph</code> supports arbitrary volume <strong>snapshots.</strong></p>
+	<p><code>reflink()</code> is currently unsupported.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="28000">
+	<p><code>ceph</code> also has spiffy
+	<strong>accounting&nbsp;and&nbsp;statistics</strong> support
+	through virtual <strong>extended&nbsp;attributes.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-30000" data-y="30000">
+	<p>And here will be my final demo for the day...</p>
+      </div>
+      <div class="step" data-scale="1" data-x="-31000" data-y="32000">
+	<h3>alice</h3>
+	<iframe src="https://localhost:4200/alice" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-30000" data-y="32000">
+	<h3>bob</h3>
+	<iframe src="https://localhost:4200/bob" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-29000" data-y="32000">
+	<h3>charlie</h3>
+	<iframe src="https://localhost:4200/charlie" scrolling="no" seamless="seamless" height="80%" width="80%"></iframe>
+      </div>
+      <div class="step" data-x="0" data-y="50000">
+	<p>That's it!</p>
+	<p>Admit it, you're geeked out now.</p>
+	<p class="small">If you're not, you have no soul.</p>
+      </div>
+      <div class="step" data-x="0" data-y="55000">
+	<p>Thanks to:</p>
+	<p><strong>Bartek Szopka</strong> for <code>impress.js</code></p>
+	<p><strong>Markus Gutschke</strong> for <code>shellinabox</code></p>
+	<p><strong>Inktank</strong> for the Ceph logo</p>
+      </div>
+      <div class="step" data-x="0" data-y="60000">
+	<p>This talk:</p>
+	<p>http://www.hastexo.com/lceu2012</p>
+      </div>
+
     </div>
 
 <script src="impress.js"></script>
