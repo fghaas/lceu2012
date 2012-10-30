@@ -1,0 +1,13 @@
+#!/bin/sh
+
+shellinaboxd \
+    --localhost-only \
+    --no-beep \
+    -c ~/.shellinabox \
+    -s /alice:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@192.168.122.111" \
+    -s /bob:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@192.168.122.112" \
+    -s /charlie:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@192.168.122.113" \
+    -s /daisy:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@192.168.122.114" \
+    -s /eric:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@192.168.122.115" \
+    -s /frank:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@192.168.122.116"
+
