@@ -54,6 +54,7 @@ iframe.full {
 
 img.full {
   height: 100%;
+  max-width: 100%;
 }
 
 iframe.with-heading {
@@ -63,6 +64,7 @@ iframe.with-heading {
 
 img.with-heading {
   height: 75%;
+  max-width: 100%;
 }
 
 code {
