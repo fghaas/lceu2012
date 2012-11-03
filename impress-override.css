@@ -18,6 +18,10 @@ body {
   text-align: center;
 }
 
+strong {
+  white-space: nowrap;
+}
+
 .slide {
   font-family: 'Josefin Slab', serif;
 }
