@@ -27,7 +27,7 @@
       <div class="step" data-x="0" data-y="0" data-scale="10">
 	<img class="full" src="Ceph_Logo_Stacked.svg"/>
       </div>
-      <div class="step" data-x="0" data-y="0" data-scale="40">
+      <div id="overview" class="step" data-x="0" data-y="0" data-scale="40">
       </div>
       <div class="step" data-x="-10000" data-y="-10000" data-scale="10">
 	<h3>Native Object Storage</h3>
@@ -49,7 +49,7 @@
       </div>
       <div class="step" data-x="-10000" data-y="-10000" data-scale="10">
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="-30000">
+      <div id="object-storage-start" class="step" data-scale="2" data-x="-30000" data-y="-30000">
 	<p>Ceph is based on a <strong>distributed, autonomic, redundant</strong> native <strong>object store</strong> named <strong>RADOS.</strong></p>
       </div>
       <div class="step" data-scale="2" data-x="-30000" data-y="-28000">
@@ -75,7 +75,7 @@
 	<p>Object placement is entirely <strong>algorithmic.</strong></p>
 	<p>There is no central lookup or distributed hashtable.</p>
       </div>
-      <div class="step" data-scale="2" data-x="-32000" data-y="-22000" data-rotate="90">
+      <div id="rados-hotel" class="step" data-scale="2" data-x="-32000" data-y="-22000" data-rotate="90">
 	<p>Now what is so special about that?</p>
       </div>
       <div class="step" data-scale="2" data-x="-34000" data-y="-22000" data-rotate="90">
@@ -154,7 +154,7 @@
 	<p>And Ceph does exactly that for you.</p>
 	<p>All of it.</p>
       </div>
-      <div class="step" data-scale="2" data-x="-74000" data-y="-22000" data-rotate="90">
+      <div id="crush" class="step" data-scale="2" data-x="-74000" data-y="-22000" data-rotate="90">
 	<p class="left"><strong>C</strong>ontrolled<br/>
 	<strong>R</strong>eplication<br/>
 	<strong>U</strong>nder<br/>
@@ -177,7 +177,7 @@
 	<p>Enough talk.</p>
 	<p>Let's take a look.</p>
       </div>
-      <div class="step" data-scale="1" data-x="-31000" data-y="-12000">
+      <div id="demo-1" class="step" data-scale="1" data-x="-31000" data-y="-12000">
 	<h3>daisy</h3>
 	<iframe class="with-heading" src="http://localhost:4214/" scrolling="no" seamless="seamless"></iframe>
       </div>
@@ -197,7 +197,7 @@
       </div>
       <div class="step" data-x="10000" data-y="-10000" data-scale="10">
       </div>
-      <div class="step" data-scale="2" data-x="30000" data-y="-26000">
+      <div id="block-storage-start" class="step" data-scale="2" data-x="30000" data-y="-26000">
 	<p>RADOS Block Device (RBD) is a
 	<strong>thin&#8209;provisioned</strong> block device interface that
 	<strong>stripes</strong> data across <strong>multiple RADOS
@@ -225,7 +225,7 @@
       <div class="step" data-scale="2" data-x="30000" data-y="-14000">
 	<p>Again, let's take a peek.</p>
       </div>
-      <div class="step" data-scale="1" data-x="29500" data-y="-12000">
+      <div id="demo-2" class="step" data-scale="1" data-x="29500" data-y="-12000">
 	<h3>alice</h3>
 	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
       </div>
@@ -235,7 +235,7 @@
       </div>
       <div class="step" data-x="10000" data-y="10000" data-scale="10">
       </div>
-      <div class="step" data-scale="2" data-x="30000" data-y="12000">
+      <div id="restful-storage-start" class="step" data-scale="2" data-x="30000" data-y="12000">
 	<p>Ceph provides <strong>ReSTful HTTP(S)</strong> access to the object store.</p>
       </div>
       <div class="step" data-scale="2" data-x="30000" data-y="14000">
@@ -255,7 +255,7 @@
       <div class="step" data-scale="2" data-x="30000" data-y="22000">
 	<p>Aaaaaaand... you know what's next.</p>
       </div>
-      <div class="step" data-scale="1" data-x="29000" data-y="24000">
+      <div id="demo-3" class="step" data-scale="1" data-x="29000" data-y="24000">
 	<h3>alice</h3>
 	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
       </div>
@@ -273,7 +273,7 @@
       </div>
       <div class="step center" data-x="-10000" data-y="10000" data-scale="10">
       </div>
-      <div class="step" data-scale="2" data-x="-30000" data-y="12000">
+      <div id="file-storage-start" class="step" data-scale="2" data-x="-30000" data-y="12000">
 	<p><code>ceph</code> is a <strong>distributed filesystem</strong> built on top of RADOS.</p>
       </div>
       <div class="step" data-scale="2" data-x="-30000" data-y="14000">
@@ -318,7 +318,7 @@
       <div class="step" data-scale="2" data-x="-30000" data-y="30000">
 	<p>And here will be my final demo for the day...</p>
       </div>
-      <div class="step" data-scale="1" data-x="-31000" data-y="32000">
+      <div id="demo-4" class="step" data-scale="1" data-x="-31000" data-y="32000">
 	<h3>alice</h3>
 	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
       </div>
@@ -335,7 +335,7 @@
 	<p>Admit it, you're geeked out now.</p>
 	<p class="small">If you're not, you have no soul.</p>
       </div>
-      <div class="step" data-x="0" data-y="55000">
+      <div id="thanks" class="step" data-x="0" data-y="55000">
 	<p>Thanks to:</p>
 	<p><strong>Bartek Szopka</strong> for <code>impress.js</code></p>
 	<p><strong>Markus Gutschke</strong> for <code>shellinabox</code></p>
