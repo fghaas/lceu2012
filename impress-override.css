@@ -35,6 +35,10 @@ strong {
   font-size: 18pt;
 }
 
+.opaque {
+    opacity: 1 !important;
+}
+
 .huge {
   font-size: 100pt;
 }
