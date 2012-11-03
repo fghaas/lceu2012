@@ -75,6 +75,92 @@
 	<p>Object placement is entirely <strong>algorithmic.</strong></p>
 	<p>There is no central lookup or distributed hashtable.</p>
       </div>
+      <div class="step" data-scale="2" data-x="-32000" data-y="-22000" data-rotate="90">
+	<p>Now what is so special about that?</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-34000" data-y="-22000" data-rotate="90">
+	<p>Think of how you checked into your <strong>hotel</strong>
+	when you arrived here.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-36000" data-y="-22000" data-rotate="90">
+	<p>You probably got one of these:</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-38000" data-y="-22000" data-rotate="90">
+	<p>And you got it here:</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-40000" data-y="-22000" data-rotate="90">
+	<p>Front desk, key card: <strong>central data lookup</strong>
+	(with caching)</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-42000" data-y="-22000" data-rotate="90">
+	<p>Works just fine <strong>for a <span class="small">small</span> hotel.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-44000" data-y="-22000" data-rotate="90">
+	<p>What if our hotel was <strong class="huge">huge?</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-46000" data-y="-22000" data-rotate="90">
+	<p>We could add <strong>more front desks,</strong> and hire <strong>more people.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-48000" data-y="-22000" data-rotate="90">
+	<p>We could also <strong>build several identical buildings,</strong> and assign guests on a <strong>pseudo-random basis.</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-50000" data-y="-22000" data-rotate="90">
+	<p>Several buildings, random assignment: <strong>distributed,
+	partitioned hashtable</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-52000" data-y="-22000" data-rotate="90">
+	<p>But what if our hotel was</p>
+      </div>
+      <div class="step" data-scale="10" data-x="-52000" data-y="-22000" data-rotate="90">
+	<p><strong class="gigantic">gigantic?</strong></p>
+      </div>
+      <div class="step" data-scale="2" data-x="-54000" data-y="-22000" data-rotate="90">
+	<p>Like, <strong>a billion</strong> rooms?</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-56000" data-y="-22000" data-rotate="90">
+	<p>Room numbers? <strong>Meaningless.</strong></p>
+	<p class="huge"># 156,398,481</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-58000" data-y="-22000" data-rotate="90">
+	<p>Is your room even <strong>still there?</strong></p>
+	<p class="small">What are the odds that it's <strong>on
+	fire,</strong> right now?</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-60000" data-y="-22000" data-rotate="90">
+	<p>Remember:<br/> <strong>at scale,</strong> <strong>something</strong> always fails.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-62000" data-y="-22000" data-rotate="90">
+	<p>What we <strong>really</strong> need is:</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-64000" data-y="-22000" data-rotate="90">
+	<p>(1) Something you <strong>already know</strong> about yourself</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-66000" data-y="-22000" data-rotate="90">
+	<p>(2) A system that takes that information and <strong>automatically guides</strong> you to your room.</p>
+	<p class="small">So you no longer care where your room is.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-68000" data-y="-22000" data-rotate="90">
+	<p>(3) Robots that <strong>automatically move</strong> all your
+	stuff when you <strong>can't enter</strong> your room.</p>
+	<p class="small">Think housekeeping.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-70000" data-y="-22000" data-rotate="90">
+	<p>(4) Magic replicating minions that <strong>duplicate all
+	your things</strong> and <strong>store them safely,
+	elsewhere</strong> as soon as you've entered your room.</p>
+	<p class="small">Because you don't want to lose them in a fire.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-72000" data-y="-22000" data-rotate="90">
+	<p>And Ceph does exactly that for you.</p>
+	<p>All of it.</p>
+      </div>
+      <div class="step" data-scale="2" data-x="-74000" data-y="-22000" data-rotate="90">
+	<p class="left"><strong>C</strong>ontrolled<br/>
+	<strong>R</strong>eplication<br/>
+	<strong>U</strong>nder<br/>
+	<strong>S</strong>calable<br/>
+	<strong>H</strong>ashing</p>
+      </div>
       <div class="step" data-scale="2" data-x="-30000" data-y="-20000">
 	<p>All OSDs <strong>know about</strong> and can
 	<strong>propagate</strong> the current <strong>map</strong>
