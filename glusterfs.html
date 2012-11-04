@@ -38,20 +38,20 @@
       <div class="step" data-x="0" data-y="20000" data-scale="2">
 	<p class="gigantic left"><strong>1</strong></p>
       </div>
-      <div class="step" data-x="0" data-y="20000" data-scale="2">
-	<p class="right">What's Pacemaker, really?</p>
+      <div class="step" data-x="400" data-y="20000" data-scale="2">
+	<p class="left">What's Pacemaker, really?</p>
       </div>
       <div class="step" data-x="0" data-y="22000" data-scale="2">
 	<p class="gigantic left"><strong>2</strong></p>
       </div>
-      <div class="step" data-x="0" data-y="22000" data-scale="2">
-	<p class="right">How do I use GlusterFS storage for Pacemaker?</p>
+      <div class="step" data-x="400" data-y="22000" data-scale="2">
+	<p class="left">How do I <strong>use</strong> GlusterFS storage for Pacemaker?</p>
       </div>
       <div class="step" data-x="0" data-y="24000" data-scale="2">
 	<p class="gigantic left"><strong>3</strong></p>
       </div>
-      <div class="step" data-x="0" data-y="24000" data-scale="2">
-	<p class="right">How do I manage GlusterFS storage with Pacemaker?</p>
+      <div class="step" data-x="400" data-y="24000" data-scale="2">
+	<p class="left">How do I <strong>manage</strong> GlusterFS storage with Pacemaker?</p>
       </div>
       <div class="step" data-x="10000" data-y="20000" data-scale="2" data-rotate="-90">
 	<p class="gigantic"><strong>1</strong></p>
@@ -64,7 +64,7 @@
 	messaging subsystem.</p>
       </div>
       <div class="step" data-x="16000" data-y="20000" data-scale="2" data-rotate="-90">
-	<p>It is entirely <strong>application agnostic</strong>.</p>
+	<p>It is entirely <strong>application agnostic.</strong></p>
       </div>
       <div class="step" data-x="18000" data-y="20000" data-scale="2" data-rotate="-90">
 	<p>Application management is through <strong>resource agents</strong>.</p>
@@ -73,12 +73,17 @@
 	<p class="gigantic"><strong>70</strong></p>
       </div>
       <div class="step" data-x="20000" data-y="20000" data-scale="2" data-rotate="-90">
-	<p>Pacemaker is also <strong>storage agnostic.</strong></p>
+	<p>It is the <strong>default cluster stack</strong> on Debian,
+	SUSE, Ubuntu, and CentOS.</p>
+	<p>Pacemaker is a <strong>Technology Preview</strong> in
+	RHEL&nbsp;6, and will be the default HA stack in
+	RHEL&nbsp;7.</p>
       </div>
       <div class="step" data-x="22000" data-y="20000" data-scale="2" data-rotate="-90">
-	<p>Which means it allows us to easily use <strong>GlusterFS mounts</strong> for storage.</p>
+	<p>Here is a simple <strong>3 node</strong> Pacemaker cluster
+	running on Debian.</p>
       </div>
-
+      
       <div id="demo-1" class="step" data-scale="1" data-x="24000" data-y="21000" data-rotate="-90">
 	<h3>alice</h3>
 	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
@@ -88,6 +93,72 @@
 	<iframe class="with-heading" src="http://localhost:4212/" scrolling="no" seamless="seamless"></iframe>
       </div>
       <div class="step" data-scale="1" data-x="24000" data-y="19000" data-rotate="-90">
+	<h3>charlie</h3>
+	<iframe class="with-heading" src="http://localhost:4213/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-x="-10000" data-y="22000" data-scale="2" data-rotate="90">
+	<p class="gigantic"><strong>2</strong></strong></p>
+      </div>
+      <div class="step" data-x="-12000" data-y="22000" data-scale="2" data-rotate="90">
+	<p>Pacemaker is <strong>storage agnostic.</strong></p>
+      </div>
+      <div class="step" data-x="-14000" data-y="22000" data-scale="2" data-rotate="90">
+	<p>Which means it allows us to easily use <strong>GlusterFS
+	mounts</strong> for storage.</p>
+      </div>
+      <div class="step" data-x="-16000" data-y="22000" data-scale="2" data-rotate="90">
+	<p>We can use the general-purpose
+	<strong><code>ocf:heartbeat:Filesystem</code></strong> resource agent.</p>
+      </div>
+      <div id="demo-2" class="step" data-scale="1" data-x="-18000" data-y="21000" data-rotate="90">
+	<h3>alice</h3>
+	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-18000" data-y="22000" data-rotate="90">
+	<h3>bob</h3>
+	<iframe class="with-heading" src="http://localhost:4212/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-18000" data-y="23000" data-rotate="90">
+	<h3>charlie</h3>
+	<iframe class="with-heading" src="http://localhost:4213/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+
+      <div class="step" data-x="0" data-y="-30000" data-scale="2" data-rotate="180">
+	<p class="gigantic"><strong>3</strong></strong></p>
+      </div>
+
+      <div class="step" data-x="0" data-y="-32000" data-scale="2" data-rotate="180">
+	<p>In 3.4, GlusterFS will ship with <strong>Pacemaker resource
+	agents</strong> to manage both
+	<strong><code>glusterd</code></strong> and <strong>individual
+	volumes.</strong></p>
+      </div>
+
+      <div class="step" data-x="0" data-y="-34000" data-scale="2" data-rotate="180">
+	<p>They allow us to <strong>auto-recover</strong> GlusterFS
+	services on systems where neither <code>upstart</code> nor
+	<code>systemd</code> are available.</p>
+      </div>
+
+      <div class="step" data-x="0" data-y="-36000" data-scale="2" data-rotate="180">
+	<p><code>ocf:glusterfs:glusterd</code> manages
+	<strong><code>glusterd</code></strong> on all GlusterFS server
+	nodes.</p>
+      </div>
+
+      <div class="step" data-x="0" data-y="-38000" data-scale="2" data-rotate="180">
+	<p><code>ocf:glusterfs:volume</code> manages individual bricks.</p>
+      </div>
+
+      <div id="demo-3" class="step" data-scale="1" data-x="1000" data-y="-40000" data-rotate="180">
+	<h3>alice</h3>
+	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="0" data-y="-40000" data-rotate="180">
+	<h3>bob</h3>
+	<iframe class="with-heading" src="http://localhost:4212/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="-1000" data-y="-40000" data-rotate="180">
 	<h3>charlie</h3>
 	<iframe class="with-heading" src="http://localhost:4213/" scrolling="no" seamless="seamless"></iframe>
       </div>
