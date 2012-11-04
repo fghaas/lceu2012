@@ -1,0 +1,99 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>GlusterFS in High Availability Clusters</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Marcellus|Josefin+Slab:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" type="text/css" href="impress.css" />
+    <link rel="stylesheet" type="text/css" href="impress-override.css" />
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by
+      impress.js, so you are presented with a simplified version of
+      this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>,
+      <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+      <div class="step slide" data-x="0" data-y="-20000" data-scale="1">
+	<div style="text-align: right;">
+	  <h1>GlusterFS in High Availability Clusters</h1>
+	  <h3>Integration with the Pacemaker cluster stack</h3>
+	  <h5>Gluster Workshop, LinuxCon Europe 2012</h5>
+	  <p>Barcelona, Catalunya, Espa&ntilde;a</p>
+	  <p>Nov 8, 2012</p>
+	</div>
+      </div>
+      <div class="step opaque" data-x="0" data-y="0" data-scale="20">
+	<img class="full" src="pacemaker_logo.svg"/>
+      </div>
+      <div class="step" data-x="0" data-y="0" data-scale="2">
+	<p>In the next <strong>45 minutes,</strong> I will give you an
+	<strong>overview</strong> of
+	<strong>GlusterFS/Pacemaker</strong> integration.</p>
+      </div>
+      <div class="step" data-x="0" data-y="10000" data-scale="2">
+	<p>We'll break this down into <span class="huge">3</span> parts.</p>
+      </div>
+      <div class="step" data-x="0" data-y="20000" data-scale="2">
+	<p class="gigantic left"><strong>1</strong></p>
+      </div>
+      <div class="step" data-x="0" data-y="20000" data-scale="2">
+	<p class="right">What's Pacemaker, really?</p>
+      </div>
+      <div class="step" data-x="0" data-y="22000" data-scale="2">
+	<p class="gigantic left"><strong>2</strong></p>
+      </div>
+      <div class="step" data-x="0" data-y="22000" data-scale="2">
+	<p class="right">How do I use GlusterFS storage for Pacemaker?</p>
+      </div>
+      <div class="step" data-x="0" data-y="24000" data-scale="2">
+	<p class="gigantic left"><strong>3</strong></p>
+      </div>
+      <div class="step" data-x="0" data-y="24000" data-scale="2">
+	<p class="right">How do I manage GlusterFS storage with Pacemaker?</p>
+      </div>
+      <div class="step" data-x="10000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p class="gigantic"><strong>1</strong></p>
+      </div>
+      <div class="step" data-x="12000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p><strong>Pacemaker</strong> is the state of the art <strong>high availability stack</strong> for Linux.</p>
+      </div>
+      <div class="step" data-x="14000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p>It is built on the <strong>Corosync</strong> cluster
+	messaging subsystem.</p>
+      </div>
+      <div class="step" data-x="16000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p>It is entirely <strong>application agnostic</strong>.</p>
+      </div>
+      <div class="step" data-x="18000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p>Application management is through <strong>resource agents</strong>.</p>
+      </div>
+      <div class="step" data-x="18000" data-y="20000" data-scale="10" data-rotate="-90">
+	<p class="gigantic"><strong>70</strong></p>
+      </div>
+      <div class="step" data-x="20000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p>Pacemaker is also <strong>storage agnostic.</strong></p>
+      </div>
+      <div class="step" data-x="22000" data-y="20000" data-scale="2" data-rotate="-90">
+	<p>Which means it allows us to easily use <strong>GlusterFS mounts</strong> for storage.</p>
+      </div>
+
+      <div id="demo-1" class="step" data-scale="1" data-x="24000" data-y="21000" data-rotate="-90">
+	<h3>alice</h3>
+	<iframe class="with-heading" src="http://localhost:4211/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="24000" data-y="20000" data-rotate="-90">
+	<h3>bob</h3>
+	<iframe class="with-heading" src="http://localhost:4212/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+      <div class="step" data-scale="1" data-x="24000" data-y="19000" data-rotate="-90">
+	<h3>charlie</h3>
+	<iframe class="with-heading" src="http://localhost:4213/" scrolling="no" seamless="seamless"></iframe>
+      </div>
+    </div>
+
+<script src="impress.js"></script>
+<script>impress().init();</script>
+  </body>
+</html>
