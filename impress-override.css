@@ -2,6 +2,15 @@ div.image-frame {
   padding: 10px;
 }
 
+.column-left {
+    float: left;
+    width: 50%;
+}
+.column-right {
+    float: right;
+    width: 50%;
+}
+
 .float-left {
   float: left;
   margin-left: 1em;
@@ -57,6 +66,10 @@ strong {
 
 .left {
   text-align: left;
+}
+
+.right {
+  text-align: right;
 }
 
 iframe.full {
@@ -120,4 +133,42 @@ h5 {
 
 h6 {
   line-height: 100%;
+}
+
+/* column container */
+.colmask {
+    clear: both;
+    float: left;
+    width: 100%;			/* width of whole page */
+    overflow: hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.col1,
+.col2,
+.col3 {
+    float: left;
+    position: relative;
+    padding: 0 0 1em 0;
+    overflow: hidden;
+}
+/* 2 Column (double page) settings */
+.doublepage {
+}
+.doublepage .colleft {
+    right:50%;			/* right column width */
+ }
+.doublepage .col1 {
+    width:46%;			/* left column content width (column width minus left and right padding) */
+    left:52%;			/* right column width plus left column left padding */
+}
+.doublepage .col2 {
+    width:46%;			/* right column content width (column width minus left and right padding) */
+    left:56%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
 }
