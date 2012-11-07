@@ -10,5 +10,6 @@ for i in `seq 11 16`; do
 	--no-beep \
 	--disable-ssl \
 	--port=$port \
+	--css=shellinabox.css \
 	--service /:florian:florian:HOME:"env SSH_AUTH_SOCK=$SSH_AUTH_SOCK ssh root@${ip}"
 done
