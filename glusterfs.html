@@ -102,8 +102,25 @@
       <div class="step" data-x="-12000" data-y="22000" data-scale="2" data-rotate="90">
 	<p>Pacemaker is <strong>storage agnostic.</strong></p>
       </div>
+      <div class="step" data-x="-12000" data-y="24000" data-scale="1" data-rotate="90">
+	<p>One storage option for Pacemaker: <strong>NAS</strong></p>
+	<p>As in <strong>CIFS</strong> or <strong>NFS.</strong>
+      </div>
+      <div class="step" data-x="-12000" data-y="26000" data-scale="1" data-rotate="90">
+	<p>Simple and easy, no locking issues.</p>
+	<p>But: very limited <strong>scaleout</strong> capability</p>
+      </div>
+      <div class="step" data-x="-12000" data-y="28000" data-scale="1" data-rotate="90">
+	<p>Another: <strong>single-instance shared storage.</strong></p>
+	<p>Requires <strong>GFS, OCFS2</strong> or similar.</p>
+      </div>
+      <div class="step" data-x="-12000" data-y="30000" data-scale="1" data-rotate="90">
+	<p>Another: <strong>DRBD.</strong></p>
+	<p>Limited <strong>scalability,</strong> limited <strong>multi-master support.</strong></p>
+      </div>
+
       <div class="step" data-x="-14000" data-y="22000" data-scale="2" data-rotate="90">
-	<p>Which means it allows us to easily use <strong>GlusterFS
+	<p>Pacemaker allows us to easily use <strong>GlusterFS
 	mounts</strong> for storage.</p>
       </div>
       <div class="step" data-x="-16000" data-y="22000" data-scale="2" data-rotate="90">
@@ -162,6 +179,21 @@
 	<h3>charlie</h3>
 	<iframe class="with-heading" src="http://localhost:4213/" scrolling="no" seamless="seamless"></iframe>
       </div>
+      <div class="step" data-x="0" data-y="-42000" data-scale="2" data-rotate="180">
+	<p>And of course we can also <strong>combine everything.</strong></p>
+      </div>
+      <div id="thanks" class="step" data-x="0" data-y="55000">
+	<p>Thanks to:</p>
+	<p><strong>Bartek Szopka</strong> <a href="https://twitter.com/bartaz"><code>@bartaz</code></a> for <code>impress.js</code></p>
+	<p><a href="http://gutschke.com/markus/"><strong>Markus Gutschke</strong></a> for <code>shellinabox</code> (and his recipe collection!)</p>
+      </div>
+      <div id="end" class="step" data-x="0" data-y="60000">
+	<p>This talk:</p>
+	<p><a href="http://www.hastexo.com/lceu2012-glusterfs">http://www.hastexo.com/lceu2012</a></p>
+	<p><a href="https://github.com/fghaas/lceu2012">https://github.com/fghaas/lceu2012</a></p>
+	<a href="http://creativecommons.org/licenses/by-sa/2.0/"><img src="by-sa.svg"></img></a>
+      </div>
+
     </div>
 
 <script src="impress.js"></script>
