@@ -33,6 +33,9 @@ body {
   background: -ms-radial-gradient(center, ellipse cover, #f0f0f0 0%,#bebebe 31%,#12547a 100%); /* IE10+ */
   background: radial-gradient(ellipse at center, #f0f0f0 0%,#bebebe 31%,#12547a 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#12547a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  font-family: 'Raleway', serif;
+  font-weight: 200;
 }
 
 strong {
@@ -44,8 +47,7 @@ strong {
 }
 
 .step {
-  font-family: 'Raleway', serif;
-  font-weight: 200;
+  font-family: inherit;
 }
 
 .small {
